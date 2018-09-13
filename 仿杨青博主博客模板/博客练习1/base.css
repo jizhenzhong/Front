@@ -1,0 +1,873 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    cursor: url("imgs/mouse.cur"), default;
+}
+
+#pagewallpaper {
+    background-image: url("imgs/pagewallpaper.jpg");
+    width: 75%;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+header {
+    height: 80px;
+    width: 75%;
+    margin: 0 auto;
+    background-color: #eb7fb5a1;
+    border-radius: 4px;
+}
+
+.logo {
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    width: 40%;
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+    right: 10%;
+    top: 15px;
+    height: 50px;
+    width: auto;
+    border-radius: 100%;
+    animation: rotateLogo 3s linear 0s infinite;
+    -webkit-animation: rotateLogo 3s linear 0s infinite;
+    -o-animation: rotateLogo 3s linear 0s infinite;
+    -moz-animation: rotateLogo 3s linear 0s infinite;
+    border: 2px double snow;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+.logo a {
+    text-decoration: none;
+    letter-spacing: 3px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10%;
+    font-size: 23px;
+    background-color: #e7d5c4;
+    box-shadow: 3px 3px 7px 0px #4e3a3aba;
+    color: #c26812;
+    display: inline-block;
+    transform: skewX(-25deg);
+}
+
+/*添加的logo提示框*/
+.tooltiptext {
+    visibility: hidden;
+    height: 40px;
+    line-height: 20px;
+    background-color: black;
+    font-size: 10px;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    right: 22%;
+    top: 15px;
+    width: 80px;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+#logoimg:hover + .tooltiptext {
+    visibility: visible;
+}
+
+header nav {
+    height: 80px;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    height: 50px;
+    margin: 15px 0;
+    line-height: 80px;
+}
+
+nav ul li {
+    text-align: center;
+    float: left;
+    font-size: 15px;
+    line-height: 50px;
+    letter-spacing: 5px;
+    width: 13%;
+    margin: 0 12px;
+    background-color: #ffdada;
+    box-shadow: inset 0px 0px 15px 0px #b32a06;
+}
+
+.active {
+    background: yellowgreen;
+}
+
+.active a {
+    color: snow;
+}
+
+nav ul li:hover {
+    width: 13%;
+    border-radius: 10%;
+    box-shadow: 0px 0px 7px 0px #bf5d2a;
+    font-size: 17px;
+}
+
+nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #1f881be3;
+    font-weight: 600;
+    width: 100%;
+}
+
+/*响应式导航*/
+#mnavicon {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+    height: 30px;
+    width: 50px;
+    background-color: snow;
+    border: 2px double green;
+}
+
+#mnavicon span {
+    height: 12%;
+    width: 60%;
+    margin-left: 20%;
+    display: inline-block;
+    background-color: green;
+}
+
+#mnavicon span:before {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    margin-top: -10px;
+    display: block;
+    background-color: green;
+}
+
+#mnavicon span:after {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+    background-color: green;
+}
+
+#mnav {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ce6262;
+    border-radius: 0 0 15% 15%;
+
+}
+
+#mnav span {
+    position: absolute;
+    right: 1%;
+    top: 4%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+#mnav span:before {
+    content: " ";
+    height: 10%;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    background-color: snow;
+    transform-origin: 60% 10%;
+    -o-transform-origin: 60% 10%;
+    -moz-transform-origin: 60% 10%;
+    -ms-transform-origin: 60% 10%;
+    -webkit-transform-origin: 60% 10%;
+    transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+#mnav span:after {
+    content: " ";
+    height: 10%;
+    width: 100%;
+    display: block;
+    background-color: snow;
+    transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+
+#mnav span:hover {
+    border: 2px solid snow;
+    border-radius: 100%;
+}
+
+#mnav ul {
+    list-style: none;
+    text-align: center;
+}
+
+#mnav ul img:first-child, #mnav ul img:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 15%;
+    border-radius: 20% 20% 0 0;
+    border: 1px double snow;
+    animation: mnavImg 2s linear 1s infinite alternate;
+    -o-animation: mnavImg 2s linear 1s infinite alternate;
+    -moz-animation: mnavImg 2s linear 1s infinite alternate;
+    -webkit-animation: mnavImg 2s linear 1s infinite alternate;
+}
+
+@keyframes mnavImg {
+    from {
+        border-radius: 20% 20% 0 0;
+    }
+    to {
+        border-radius: 50% 50% 0 0;
+    }
+}
+
+#mnav ul img:first-child {
+    left: 10%;
+}
+
+#mnav ul img:last-child {
+    right: 10%;
+
+}
+
+#mnav ul li {
+    width: 30%;
+    margin: 0 auto;
+    background-color: #4ced6bb8;
+    border-bottom: 2px double grey;
+    box-shadow: 1px 4px 0px 0px #e9dadc;
+    text-align: center;
+    animation: mnavAnimation 0.3s linear;
+    -moz-animation: mnavAnimation 0.3s linear;
+    -o-animation: mnavAnimation 0.3s linear;
+    -webkit-animation: mnavAnimation 0.3s linear;
+}
+
+@keyframes mnavAnimation {
+    from {
+        height: 0;
+    }
+    to {
+        height: 24px;
+    }
+}
+
+#mnav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    display: inline-block;
+    letter-spacing: 10px;
+    /*letter-spacing居中解决办法*/
+    text-indent: 10px;
+    color: snow;
+
+}
+
+#mnav ul li:hover {
+    background-color: #d65656c9;
+}
+
+#mnav ul li a:hover {
+    color: gold;
+}
+
+#content {
+    position: relative;
+    background-color: #efe8ea9c;
+    width: 75%;
+    margin: 0 auto;
+    border-top: 4px outset pink;
+}
+
+#content:before {
+    content: "";
+    height: 50%;
+    background-color: black;
+}
+
+#content section {
+    width: 80%;
+}
+
+.carousel {
+    width: 100%;
+    border-bottom: 2px solid #e5c8e9;
+    padding-bottom: 2%;
+
+}
+
+.carousel h4 {
+    text-align: center;
+    padding: 2% 0 1% 0;
+    color: #e03658;
+}
+
+.carousel h4 sup {
+    color: #ec9aeb;
+    display: inline-block;
+    transform: rotate(-10deg);
+    animation: rotateSup 1s linear 0s infinite alternate;
+    -moz-animation: rotateSup 1s linear 0s infinite alternate;
+    -o-animation: rotateSup 1s linear 0s infinite alternate;
+    -webkit-animation: rotateSup 1s linear 0s infinite alternate;
+    text-shadow: 3px 3px 5px #6fe680;
+}
+
+@keyframes rotateSup {
+    from {
+        transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+        -o-transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+    }
+}
+
+.carousel div {
+    /*width: 50%;*/
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 5px double snow;
+    border-radius: 10px;
+    box-shadow: 4px 7px 11px 1px #d68585;
+}
+
+/*要使css动画重新执行一次，有两种方法：1.通过节点替换方式，2.调用不同动画名但动画效果相同的方式*/
+@keyframes carouselDivLeft1 {
+    from {
+        transform: rotate(0deg) scale(0.3, 0.3);
+    }
+    to {
+        transform: rotate(-720deg) scale(0.8, 0.8);
+    }
+}
+
+@keyframes carouselDivLeft2 {
+    from {
+        transform: rotate(0deg) scale(0.3, 0.3);
+    }
+    to {
+        transform: rotate(-720deg) scale(0.8, 0.8);
+    }
+}
+
+@keyframes carouselDivRight1 {
+    from {
+        transform: rotate(0deg) scale(0.3, 0.3);
+    }
+    to {
+        transform: rotate(720deg) scale(0.8, 0.8);
+    }
+}
+
+@keyframes carouselDivRight2 {
+    from {
+        transform: rotate(0deg) scale(0.3, 0.3);
+    }
+    to {
+        transform: rotate(720deg) scale(0.8, 0.8);
+    }
+}
+
+/*.carousel div:hover {*/
+/*width: 50%;*/
+/*}*/
+
+.carousel div #left, #right {
+    position: absolute;
+    top: 45%;
+    color: snow;
+}
+
+.carousel div #left {
+    left: 2%;
+    z-index: 99;
+}
+
+.carousel div #right {
+    right: 2%;
+    z-index: 99;
+}
+
+.carousel div #left:hover, #right:hover {
+    color: red;
+}
+
+.carousel ul {
+    list-style: none;
+    width: 400%;
+    /*这里必须是相对定位，如果是绝对定位的话就会使.carousel div没有高度，具体原因未解决*/
+    position: relative;
+    left: 0;
+    /*清除浮动*/
+    overflow: auto;
+    zoom: 1;
+}
+
+.carousel ul li {
+    width: 25%;
+    float: left;
+}
+
+.carousel ul li a {
+    display: inline-block;
+}
+
+.carousel ul li img {
+    width: 100%;
+    /*解决a标签内放置img标签底部多出空隙的问题*/
+    vertical-align: bottom
+}
+
+.article {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.article h3 {
+    text-align: center;
+    margin: 2% 0;
+    color: #89375d;
+    background-color: snow;
+    text-shadow: 2px 3px 5px #d75757;
+}
+
+.article ul {
+    list-style: none;
+}
+
+.article ul li {
+    position: relative;
+    height: 150px;
+    background-color: snow;
+    margin: 1% 0;
+    box-shadow: 2px 1px 3px 1px #e67fe1;
+
+}
+
+.article ul li .arcLeft {
+    left: 0;
+    /*width: ;*/
+    display: inline-block;
+    height: 100%;
+}
+
+.article ul li .arcLeft h5 {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1% 0;
+    color: #504949;
+    height: 25%;
+}
+
+.article ul li .arcLeft p {
+    font-family:  "微软雅黑", Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    white-space: pre-wrap;
+    margin: 0 2%;
+    height: 55%;
+    text-indent: 2em;
+    line-height: 21px;
+    color: #796d6d;
+}
+
+.article ul li .arcLeft div {
+    height: 20%;
+    position: relative;
+}
+.article ul li .arcLeft div span:first-child{
+    text-align: right;
+    position: absolute;
+    font-size: 10px;
+    font-weight: 600;
+    color: #786a76;
+    width: 18%;
+    left: 3%;
+    display: inline-block;
+    height: 80%;
+    background-image: url("imgs/icon1.png");
+    background-size: auto 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    line-height: 24px;
+}
+.article ul li .arcLeft div span:nth-child(2){
+    font-size: 10px;
+    font-weight: 600;
+    color: #786a76;
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    height: 80%;
+    left: 25%;
+    width: 10%;
+    background-image: url("imgs/icon2.png");
+    background-size: auto 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+    line-height: 24px;
+
+}
+.article ul li .arcLeft div span:last-child{
+    font-size: 10px;
+    display: inline-block;
+    position: absolute;
+    right: 4%;
+    line-height: 24px;
+    height: 100%;
+    font-weight: 600;
+
+}
+.article ul li .arcLeft div span:last-child a{
+    color: green;
+    display: inline-block;
+    text-decoration: none;
+}
+.article ul li .arcLeft div span:last-child a:hover{
+    color: red;
+}
+.article ul li .arcRight {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    height: 100%;
+    border: 2px double #cd94c3;
+    border-radius: 2%;
+    padding: 2px;
+}
+
+.article ul li .arcRight img {
+    height: 100%;
+}
+
+#content aside {
+    width: 20%;
+    height: 1500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #bf5d2a;
+
+}
+
+@media screen and (min-width: 1600px) {
+    #pagewallpaper {
+        height: 180px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+    .tooltiptext {
+        right: 28%;
+    }
+
+    #pagewallpaper {
+        animation: changeHeight 1s linear;
+        -o-animation: changeHeight 1s linear;
+        -moz-animation: changeHeight 1s linear;
+        -webkit-animation: changeHeight 1s linear;
+        height: 130px;
+    }
+
+    @keyframes changeHeight {
+        from {
+            height: 180px;
+        }
+        to {
+            height: 130px;
+        }
+    }
+    .article h3{
+        font-size: 16px;
+    }
+    .article ul li{
+        height: 120px;
+    }
+    .article ul li .arcLeft p{
+        line-height: 17px;
+    }
+    .article ul li .arcLeft div span:first-child{
+        width: 23%;
+        line-height: 19px;
+    }
+    .article ul li .arcLeft div span:nth-child(2){
+        left: 26%;
+        width: 11%;
+        line-height: 19px;
+    }
+    .article ul li .arcLeft div span:last-child{
+        line-height: 19px;
+    }
+}
+
+@media screen  and (min-width: 992px) and (max-width: 1200px) {
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .tooltiptext {
+        right: 28%;
+    }
+
+    #pagewallpaper {
+        animation: changeHeight 1s linear;
+        -o-animation: changeHeight 1s linear;
+        -moz-animation: changeHeight 1s linear;
+        -webkit-animation: changeHeight 1s linear;
+        height: 100px;
+    }
+
+    @keyframes changeHeight {
+        from {
+            height: 130px;
+        }
+        to {
+            height: 100px;
+        }
+    }
+    .carousel h4 {
+        font-size: 15px;
+    }
+    .article h3{
+        font-size: 13px;
+    }
+    .article ul li .arcRight{
+        display: none;
+    }
+    .article ul li{
+        height: 120px;
+    }
+    .article ul li .arcLeft p{
+        line-height: 22px;
+        font-size: 15px;
+
+    }
+    .article ul li .arcLeft div span:first-child{
+        width: 23%;
+        line-height: 19px;
+    }
+    .article ul li .arcLeft div span:nth-child(2){
+        left: 26%;
+        width: 11%;
+        line-height: 19px;
+    }
+    .article ul li .arcLeft div span:last-child{
+        line-height: 19px;
+    }
+
+
+}
+
+@media screen  and (min-width: 768px) and (max-width: 992px) {
+    header {
+        height: 80px;
+        width: 100%;
+        margin: 0px auto;
+        background-color: #eb7fb5a1;
+        /*box-shadow: inset -8px -6px 16px 0px #c62121;*/
+    }
+
+    .tooltiptext {
+        right: 28%;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #mnavicon {
+        display: block;
+    }
+
+    #mnav.open {
+        display: block;
+        z-index: 9999;
+    }
+
+    #mnav.close {
+        display: none;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    .carousel h4 {
+        font-size: 13px;
+    }
+    .article h3{
+        font-size: 13px;
+    }
+    .article ul li .arcRight{
+        display: none;
+    }
+    .article ul li{
+        height: 120px;
+    }
+    .article ul li .arcLeft p{
+        line-height: 22px;
+        font-size: 15px;
+
+    }
+    .article ul li .arcLeft div span:first-child{
+        width: 21%;
+        line-height: 19px;
+    }
+    .article ul li .arcLeft div span:nth-child(2){
+        left: 24%;
+        width: 10%;
+        line-height: 19px;
+    }
+    .article ul li .arcLeft div span:last-child{
+        line-height: 19px;
+    }
+}
+
+@media screen  and (max-width: 768px) {
+    header {
+        height: 60px;
+        width: 100%;
+        margin: 0px auto;
+        background-color: #eb7fb5a1;
+        /*box-shadow: inset -8px -6px 16px 0px #c62121;*/
+    }
+
+    .logo {
+        height: 60px;
+        line-height: 60px;
+        width: 60%;
+    }
+
+    .logo img {
+        top: 10px;
+        height: 40px;
+        right: 0;
+    }
+
+    .tooltiptext {
+        display: none;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #mnavicon {
+        display: block;
+        top: 10px;
+
+    }
+
+    #mnav.open {
+        display: block;
+        z-index: 9999;
+    }
+
+    #mnav.close {
+        display: none;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    .carousel h4 {
+        font-size: 8px;
+    }
+    .article h3{
+        font-size: 13px;
+    }
+    .article ul li .arcRight{
+        display: none;
+    }
+    .article ul li{
+        height: 120px;
+    }
+    .article ul li .arcLeft p{
+        line-height: 22px;
+        font-size: 13px;
+
+    }
+    .article ul li .arcLeft div span:first-child{
+        display: none;
+    }
+    .article ul li .arcLeft div span:nth-child(2){
+        display: none;
+    }
+    .article ul li .arcLeft div span:last-child{
+        line-height: 19px;
+    }
+
+}
+

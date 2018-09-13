@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas实现加载条</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #load{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: white;
+    }
+    canvas {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        z-index: 2;
+        animation: rotate 0.7s linear infinite;
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+</style>
+<body>
+<div id="load">
+    <canvas id="loading">
+
+    </canvas>
+</div>
+
+
+<div id="myPage">
+    <p>我是页面(注:放好几个大音频，专门用来测试加载效果，注意运行一次后要清缓存再次测试)</p>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+</div>
+<script>
+    var canvas = document.getElementById("loading");
+    canvas.width = 60;
+    canvas.height = 60;
+    var ctx = canvas.getContext("2d");
+    var grd = ctx.createRadialGradient(30, 30, 9, 30, 30, 23);
+    grd.addColorStop(0, "gray");
+    grd.addColorStop(0.25, "pink");
+    grd.addColorStop(0.50, "aqua");
+    grd.addColorStop(0.75, "red");
+    grd.addColorStop(1, "yellow");
+    ctx.strokeStyle = grd;
+    ctx.lineCap = "round";
+    ctx.lineWidth = 14;
+    ctx.beginPath();
+    ctx.arc(30, 30, 9, 0.15 * Math.PI, 1.5 * Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(30, 30, 23, 0.15 * Math.PI, 1.5 * Math.PI);
+    ctx.stroke();
+    document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+            setTimeout(function () {
+                document.getElementById("load").style.display = "none";
+            }, 300)
+        }
+    }
+</script>
+</body>
+</html>

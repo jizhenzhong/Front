@@ -1,0 +1,633 @@
+/*index页面css*/
+/*header头主要通过导航菜单li的固定高度而撑起来的高度，另外pcnav一开始给了1200px的宽度到达手机分辨率的时候才换成100%*/
+header {
+    width: 100%;
+    background-color: black;
+}
+
+.nav {
+    width: 1200px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+}
+
+.nav .logo {
+    float: left;
+    height: 46px;
+    font-size: 35px;
+    line-height: 46px;
+    margin: 10px 0 0 10px;
+}
+
+.nav .pcnav {
+    overflow: hidden;
+}
+
+.nav .pcnav ul {
+    text-align: right;
+    margin: 10px;
+}
+
+.nav .pcnav li {
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 10px 20px;
+    font-size: 16px;
+
+}
+.nav .pcnav li a{
+    color: #919191;
+}
+.nav .pcnav li a:hover {
+    border-bottom: 2px solid #919191;
+}
+
+#mnav {
+    display: none;
+    width: 100%;
+}
+
+h2 {
+    width: 100%;
+    text-align: right;
+    height: 56px;
+    line-height: 56px;
+}
+
+h2 span {
+    margin-right: 5%;
+    display: inline-block;
+    width: 30px;
+    height: 5px;
+    position: relative;
+    background-color: #555;
+}
+
+h2 span:before {
+    display: block;
+    content: " ";
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    bottom: 10px;
+    background-color: #555;
+}
+
+h2 span:after {
+    display: block;
+    content: " ";
+    width: 30px;
+    height: 5px;
+    background-color: #555;
+    position: absolute;
+    top: 10px;
+}
+
+h2.open {
+    background-color: rgba(1, 1, 1, 0.8);
+}
+
+h2.open span {
+    background: none;
+}
+
+h2.open span:before {
+    position: absolute;
+    background-color: #bebebe;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -webkit-transform: rotate(45deg); /* Safari 和 Chrome */
+    -o-transform: rotate(45deg); /* Opera */
+    bottom: 0;
+}
+
+h2.open span:after {
+
+    background-color: #bebebe;
+    position: absolute;
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -moz-transform: rotate(-45deg); /* Firefox */
+    -webkit-transform: rotate(-45deg); /* Safari 和 Chrome */
+    -o-transform: rotate(-45deg); /* Opera */
+    top: 0;
+}
+
+#mnav ul {
+    display: none;
+    background-color: rgba(1, 1, 1, 0.8);
+    padding-bottom: 40px;
+}
+
+#mnav ul li {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#mnav ul li a {
+    color: #919191;
+}
+
+/*.picshow也主要通过ul下的li的固定高度而撑起来的高度*/
+.picshow {
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.picshow ul li {
+    width: 20%;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.picshow li i {
+    display: block;
+    height: 400px;
+    overflow: hidden;
+}
+
+.picshow ul li i img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.picshow li:hover img {
+    transform: scale(1.05, 1.05);
+    -o-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    -webkit-transform: scale(1.05, 1.05);
+    opacity: 1;
+}
+
+.picshow li:hover .font::before, .picshow li:hover .font::after {
+    opacity: 1;
+    transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.picshow li .font {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    overflow: hidden
+}
+
+.picshow li .font::before, .picshow li .font::after {
+    position: absolute;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.4s, -webkit-transform .4s;
+    -moz-transition: opacity 0.4s, -moz-transform .4s;
+    -o-transition: opacity 0.4s, -o-transform .4s;
+    transition: opacity 0.4s, transform .4s
+}
+
+.picshow li .font::before {
+    top: 14%;
+    right: 5%;
+    bottom: 14%;
+    left: 5%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0, 1);
+    -moz-transform: scale(0, 1);
+    -o-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0
+}
+
+.picshow li .font::after {
+    top: 8%;
+    right: 10%;
+    bottom: 8%;
+    left: 10%;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -o-transform-origin: 100% 0;
+    transform-origin: 100% 0
+}
+
+.picshow li .font h3 {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    line-height: 1.9;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    opacity: 0
+}
+
+.picshow li:hover .font h3 {
+    top: 45%;
+    opacity: 1
+}
+
+/*给article1200px为了与.pcnav对齐*/
+.content {
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+article {
+    width: 70%;
+    float: left;
+
+}
+
+article ul li {
+    /*减去左右padding总共40px的值*/
+    width: calc(100% - 40px);
+    overflow: hidden;
+    background-color: #322c2c;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+article ul li .blogpic {
+    width: 30%;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+article ul li:nth-child(odd) .blogpic {
+    float: left;
+    margin-right: 3%;
+}
+
+article ul li:nth-child(even) .blogpic {
+    float: right;
+    margin-left: 3%;
+}
+
+/*article ul li .blogpic a {*/
+/*display: inline-block;*/
+/*}*/
+
+article ul li img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+article ul li .blogtitle {
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+article ul li .bloginfo p {
+    color: #888;
+    line-height: 24px;
+}
+
+article ul li .autor {
+    display: inline-block;
+    clear: both;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.autor .lm {
+    background: url("../imgs/newsbg01.png") no-repeat left center;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+.autor .lm a {
+    color:#9d692d;
+}
+
+.autor .dtime {
+    background: url("../imgs/newsbg02.png") no-repeat left center;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+.autor .viewnum {
+    background: url("../imgs/newsbg04.png") no-repeat left center;
+    padding-left: 20px;
+}
+
+.autor .viewnum a {
+    color: #9d692d;
+}
+
+.autor .readmore {
+    float: right;
+    margin-right: 10px;
+}
+
+.autor .readmore a {
+    color: #fff;
+}
+.autor .readmore a:hover{
+    text-decoration: underline;
+}
+aside {
+    width: 28%;
+    float: right;
+}
+
+.about {
+    background: #322c2c url("../imgs/banner.jpg") no-repeat;
+    width: 100%;
+    /*清除浮动*/
+    overflow: hidden;
+
+}
+
+.about .avatar {
+    margin: 80px auto 20px;
+    width: 100px;
+}
+
+.about .avatar img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.about .abname {
+    margin-bottom: 10px;
+    text-align: center;
+    /*color: #3f3f3f;*/
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.about .abposition {
+    text-align: center;
+    color: #e1e1e1;
+}
+
+.about .abtext {
+    padding: 20px 40px;
+    color: #9a9a9a;
+    line-height: 26px;
+}
+
+.links {
+    background-color: #322c2c;
+    width: 100%;
+    overflow: hidden;
+    margin-top:15px ;
+
+}
+
+.links .hometitle {
+    font-size: 18px;
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #646262;
+    color: #aeaeae;
+    padding: 0 10px;
+    /*为了给伸长的border-bottom细线定位*/
+    position: relative;
+}
+/*伸长的border-bottom细线*/
+.links .hometitle:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: -1px;
+    background: #333;
+    transition: 2s ease all;
+}
+.hometitle:hover:after {
+    width: 100%;
+    transition: 2s ease all;
+}
+
+.links ul {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.links ul li {
+    text-align: center;
+
+}
+.links ul li a{
+    color: #888;
+}
+
+.links ul li a:hover{
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    background: #333;
+    color: #a5a4a4;
+    text-align: center;
+    padding: 20px 0;
+}
+footer a {
+    color: #a5a4a4
+}
+
+/*about页面css*/
+h1.t_nav span {
+    float: right;
+    color: #999;
+}
+
+h1.t_nav {
+    border-bottom:  1px solid #777777;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 40px;
+    width: 100%;
+    overflow: hidden
+}
+
+h1.t_nav a {
+    width: 100px;
+    display: block;
+    text-align: center;
+    color: #919191;
+    float: left
+}
+.n1,.n2 {
+    background: black;
+}
+h1.t_nav .n2{
+    color: #fff;
+}
+
+.ab_box {
+    padding: 20px;
+    overflow: hidden;
+    background: #fff;
+    margin-top: 20px;
+}
+.leftbox {
+    width: 70%;
+    float: left;
+    overflow: hidden;
+}
+.newsview {
+    padding: 0 30px
+}
+.ab_box .news_infos {
+    padding: 30px 0
+}
+.news_infos {
+    line-height: 24px;
+    text-align: justify;
+}
+.news_infos p {
+    margin-bottom: 10px
+}
+
+.rightbox {
+    width: 28%;
+    float: right;
+    overflow: hidden;
+}
+.aboutme {
+    overflow: hidden;
+    background: #fff;
+}
+.aboutme .hometitle{
+    padding: 0 10px;
+    line-height: 50px;
+    height: 50px;
+    font-size: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    color: #333;
+    text-align: left;
+    position: relative;
+}
+.aboutme .hometitle:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: -1px;
+    background: #333;
+    transition: 2s ease all;
+}
+
+.aboutme .hometitle:hover:after {
+    width: 100%;
+    transition: 2s ease all;
+}
+.ab_box .avatar {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50px;
+    margin: 10px auto 0;
+}
+
+.ab_box .avatar img {
+    width: 100px;
+    height: 100px
+}
+.ab_con {
+    line-height: 30px;
+    padding: 10px;
+}
+
+.ab_con p {
+    background: #f6f6f6;
+    margin: 5px 0;
+    padding-left: 10px;
+    border-radius: 5px;
+    text-shadow: rgba(255, 255, 255, 0.3) 0px 1px 0px;
+}
+/*前端css*/
+
+article.classifypage ul li .blogpic{
+    float: left;
+}
+/* 分页 */
+.pagelist {
+    text-align: center;
+    color: #666;
+    width: 100%;
+    clear: both;
+    margin: 20px 0;
+    padding-top: 20px
+}
+.pagelist a {
+    color: #666;
+    margin: 0 2px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+.pagelist a:hover {
+    color: #f00;
+    text-decoration: underline
+}
+
+.pagelist > b {
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+/*文章阅读页面*/
+.article_box{
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px 40px;
+    overflow: hidden;
+}
+.article_box .arctitle{
+    text-align: center;
+    margin: 15px;
+}
+.article_box p{
+    text-indent: 2em;
+    font-size: 16px;
+}

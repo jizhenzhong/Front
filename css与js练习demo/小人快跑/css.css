@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+}
+img{
+    position: absolute;
+    left:20px;
+    top:50px;
+}

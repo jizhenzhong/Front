@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#box{
+    width: 1200px;
+    height: 700px;
+    position: relative;
+    left: 200px;
+    top: 80px;
+}
+#minImg{
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+#maxImg{
+    width: 400px;
+    height: 400px;
+    float: right;
+    overflow: hidden;
+    display: none;
+    position: relative;
+}
+i{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+#img{
+    position: absolute;
+    left: 0;
+    top: 0;
+}

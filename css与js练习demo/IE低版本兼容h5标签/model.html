@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IE兼容h5标签</title>
+    <link rel="stylesheet" href="model.css">
+    <script>
+        (function () {
+            if (!
+                    /*@cc_on!@*/
+                    0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i = e.length;
+            while (i--) {
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+</head>
+<body>
+
+</body>
+</html>

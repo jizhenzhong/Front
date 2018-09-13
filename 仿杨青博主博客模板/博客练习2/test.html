@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+       ul{
+           list-style: none;
+       }
+        a{
+            text-decoration: none;
+        }
+
+        #carousel{
+            width: 60%;
+            margin: 200px auto 0;
+        }
+        .carouselBox{
+            width: 100%;
+        }
+        .carouselBox ul{
+            width: calc(100% + 1 / 3 * 100% * 4);
+            /*这里必须是相对定位，如果是绝对定位的话就会使.carouselBox没有高度，具体原因未解决*/
+            position: relative;
+            left: 0;
+            /*解决多个inline-block标签一行中的间隙问题(由于inline-block标签间有空白被当做空格给予了字体大小引起的)*/
+            font-size: 0;
+            -webkit-text-size-adjust:none;
+        }
+        .carouselBox ul li{
+            display: inline-block;
+            width: calc(1 / 7 * 100%);
+        }
+        .carouselBox a{
+            display: inline-block;
+        }
+        .carouselBox img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="carousel">
+    <div class="carouselBox" id="carouselBox">
+        <!--<span id="left">《</span>-->
+        <ul>
+            <li><a href="javascript:void(0)"><img src="imgs/carousel1.jpg" alt=""></a></li>
+            <li class="scaleLi"><a href="javascript:void(0)"><img src="imgs/carousel2.jpg" alt=""></a></li>
+            <li><a href="javascript:void(0)"><img src="imgs/carousel3.jpg" alt=""></a></li>
+            <li><a href="javascript:void(0)"><img src="imgs/carousel4.jpg" alt=""></a></li>
+            <li><a href="javascript:void(0)"><img src="imgs/carousel5.jpg" alt=""></a></li>
+            <!--增加这两个li标签是为了实现层叠式(我的即兴叫法)轮播图的假循环，是通过计算得用移动方式实现需要追加的li的最少数量-->
+            <li><a href="javascript:void(0)"><img src="imgs/carousel1.jpg" alt=""></a></li>
+            <li><a href="javascript:void(0)"><img src="imgs/carousel2.jpg" alt=""></a></li>
+        </ul>
+        <!--<span id="right">》</span>-->
+    </div>
+</div>
+
+
+<script>
+
+</script>
+</body>
+</html>

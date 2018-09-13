@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>BIGDOG-向全栈奋进中的一枚web小白</title>
+    <link rel="stylesheet" href="css/skinPink.css" id="skinCSS">
+    <script src="js/debugJS.js"></script>
+</head>
+<body>
+<header>
+    <div id="nav">
+        <div class="logo">
+            <img src="imgs/logo1.jpg" alt="" id="logoImg">
+        </div>
+        <span class="musicTip">单击控制音乐播放,双击换歌</span>
+        <h3><a href="index.html">BIGDOG</a></h3>
+        <audio id="music">
+            <source src="music/music1.mp3" type="audio/mpeg">
+            您的浏览器不支持 audio 元素。
+        </audio>
+        <button id="changeSkin"></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="front.html">前端</a></li>
+                <li><a href="backEnd.html">后端</a></li>
+                <li><a href="server.heml">服务器</a></li>
+                <li><a href="life.heml">生活</a></li>
+            </ul>
+        </nav>
+        <div id="mnavicon"><span></span></div>
+        <div id="mnav">
+            <span></span>
+            <ul>
+                <img src="imgs/mnavImg1.jpg" alt="">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="front.html">前端</a></li>
+                <li><a href="backEnd.html">后端</a></li>
+                <li><a href="server.heml">服务器</a></li>
+                <li><a href="life.heml">生活</a></li>
+                <img src="imgs/mnavImg2.jpg" alt="">
+            </ul>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="carousel" id="carousel">
+        <div class="carouselBox" id="carouselBox">
+            <span id="left">《</span>
+            <ul>
+                <li><a href="javascript:void(0)"><img src="imgs/carousel1.jpg" alt=""></a></li>
+                <li class="scaleLi"><a href="javascript:void(0)"><img src="imgs/carousel2.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="imgs/carousel3.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="imgs/carousel4.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="imgs/carousel5.jpg" alt=""></a></li>
+                <!--增加这两个li标签是为了实现层叠式(我的即兴叫法)轮播图的假循环，是通过计算得用移动方式实现需要追加的li的最少数量-->
+                <li><a href="javascript:void(0)"><img src="imgs/carousel1.jpg" alt=""></a></li>
+                <li><a href="javascript:void(0)"><img src="imgs/carousel2.jpg" alt=""></a></li>
+            </ul>
+            <span id="right">》</span>
+        </div>
+    </div>
+    <div class="content" id="content">
+        <article>
+            <h3>最新文章<sup>new</sup></h3>
+            <ul>
+                <li>
+                    <div class="arcLeft">
+                        <h5>java入门与教程</h5>
+                        <p>阿阿阿阿阿阿啊啊啊啊啊啊啊啊啊啊啊啊啊，=，啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊aaaaaaaaaaaaaaaaaaaaaaaaaa啊啊啊啊啊啊啊啊啊啊啊啊啊啊wordpress hello word afafassafas啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊ffffffffffffffffffffffffffffffffffffff</p>
+                        <div>
+                            <span>2017-06-16</span>
+                            <span>0&nbsp;人</span>
+                            <span><a href="#">>>阅读全文</a></span>
+                        </div>
+                    </div>
+                    <div class="arcRight">
+                        <!--<img src="imgs/article1.jpg" alt="">-->
+                    </div>
+                </li>
+                <li>
+                    <div class="arcLeft">
+                        <h5>java入门与教程</h5>
+                        <p>阿阿阿阿阿阿啊啊啊啊啊啊啊啊啊啊啊啊啊，=，啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊aaaaaaaaaaaaaaaaaaaaaaaaaa啊啊啊啊啊啊啊啊啊啊啊啊啊啊wordpress hello word afafassafas啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊ffffffffffffffffffffffffffffffffffffff</p>
+                        <div>
+                            <span>2017-06-16</span>
+                            <span>0&nbsp;人</span>
+                            <span><a href="#">>>阅读全文</a></span>
+                        </div>
+                    </div>
+                    <div class="arcRight">
+                        <!--<img src="imgs/article1.jpg" alt="">-->
+                    </div>
+                </li>
+                <li>
+                    <div class="arcLeft">
+                        <h5>java入门与教程</h5>
+                        <p>阿阿阿阿阿阿啊啊啊啊啊啊啊啊啊啊啊啊啊，=，啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊aaaaaaaaaaaaaaaaaaaaaaaaaa啊啊啊啊啊啊啊啊啊啊啊啊啊啊wordpress hello word afafassafas啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊ffffffffffffffffffffffffffffffffffffff</p>
+                        <div>
+                            <span>2017-06-16</span>
+                            <span>0&nbsp;人</span>
+                            <span><a href="#">>>阅读全文</a></span>
+                        </div>
+                    </div>
+                    <div class="arcRight">
+                        <!--<img src="imgs/article1.jpg" alt="">-->
+                    </div>
+                </li>
+                <li>
+                    <div class="arcLeft">
+                        <h5>java入门与教程</h5>
+                        <p>阿阿阿阿阿阿啊啊啊啊啊啊啊啊啊啊啊啊啊，=，啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊aaaaaaaaaaaaaaaaaaaaaaaaaa啊啊啊啊啊啊啊啊啊啊啊啊啊啊wordpress hello word afafassafas啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊ffffffffffffffffffffffffffffffffffffff</p>
+                        <div>
+                            <span>2017-06-16</span>
+                            <span>0&nbsp;人</span>
+                            <span><a href="#">>>阅读全文</a></span>
+                        </div>
+                    </div>
+                    <div class="arcRight">
+                        <!--<img src="imgs/article1.jpg" alt="">-->
+                    </div>
+                </li>
+
+                <li>
+                    <div class="arcLeft">
+                        <h5>java入门与教程</h5>
+                        <p>阿阿阿阿阿阿啊啊啊啊啊啊啊啊啊啊啊啊啊，=，啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊阿啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊aaaaaaaaaaaaaaaaaaaaaaaaaa啊啊啊啊啊啊啊啊啊啊啊啊啊啊wordpress hello word afafassafas啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊ffffffffffffffffffffffffffffffffffffff</p>
+                        <div>
+                            <span>2017-06-16</span>
+                            <span>0&nbsp;人</span>
+                            <span><a href="#">>>阅读全文</a></span>
+                        </div>
+                    </div>
+                    <div class="arcRight">
+                        <!--<img src="imgs/article1.jpg" alt="">-->
+                    </div>
+                </li>
+            </ul>
+        </article>
+        <aside>
+
+        </aside>
+    </div>
+</section>
+
+
+<script src="js/base.js"></script>
+</body>
+</html>

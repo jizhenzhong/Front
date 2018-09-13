@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width: 5%;
+    text-align: center;
+    background-color: pink;
+    margin-top: 30px;
+    /*overflow高度自适应问题没有解决*/
+    overflow:hidden;
+}
+ul{
+    padding: 0 ;
+    perspective: 1000px;
+    /*opera不支持3D转换*/
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+}
+
+ul li{
+    list-style: none;
+    padding: 10px 0 10px 0;
+    transition: transform 5s linear;
+    -webkit-transition: transform 3s linear;
+    -moz-transition: transform 3s linear;
+    -o-transition: transform 3s linear;
+
+}
+ul li:hover{
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -o-transform: rotateY(3600deg);
+}
+li span{
+    background-color: gainsboro;
+}

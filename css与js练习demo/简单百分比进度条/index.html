@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单百分比加载条(顶部位置处)</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    #load{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background-color: white;
+    }
+
+    #progress {
+        position: absolute;
+        background-color: cadetblue;
+        top: 0;
+        left: 0;
+        height:2px;
+        width: 0;
+        animation: myWidth 0.1s linear;
+    }
+    @keyframes myWidth {
+        0%{width: 0}
+        30%{width: 30%}
+        60%{width: 60%}
+        90%{width: 90%}
+        100%{width: 100%}
+    }
+</style>
+<script>
+    document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+            setTimeout(function () {
+                document.getElementById("load").style.display = "none";
+            },300)
+        }
+    }
+</script>
+<body>
+<div id="load">
+    <div id="progress">
+
+    </div>
+</div>
+
+<br><br>
+
+<script>
+    document.getElementById("progress").style.width="0%";
+</script>
+
+<div id="myPage">
+    <p style="text-align: center">
+        这种方式通过DOM从顶往下加载的原理在DOM文档的不同位置设置进度百分比而实现加载
+        进度效果，需要在一个页面嵌入多个js来控制加载进度，仅供学习，不推荐使用此方式
+    </p>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <script>
+        document.getElementById("progress").style.cssText = "width:30%;";
+    </script>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <script>
+        document.getElementById("progress").style.cssText = "width:60%;";
+    </script>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <script>
+        document.getElementById("progress").style.cssText = "width:90%;";
+    </script>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <script>
+        document.getElementById("progress").style.cssText = "width:100%;";
+    </script>
+</div>
+</body>
+</html>

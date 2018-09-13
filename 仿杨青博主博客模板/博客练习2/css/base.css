@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*chrome浏览器font-size小于12px没作用*/
+    font-size: 14px;
+}
+
+body {
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    cursor: url("../imgs/mouse.cur"), default;
+    /*css渐变从上到下兼容所有浏览器*/
+    background: -webkit-linear-gradient(#f45050d9, #f27c7cd9); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#f45050d9, #f27c7cd9); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#f45050d9, #f27c7cd9); /* Firefox 3.6 - 15 */
+    /*ie不支持ARGB颜色，所以也需要改为RGB颜色,*/
+    background: linear-gradient(#f66c6c, #f48f8f); /* 兼容IE10、IE11不能用ARGB颜色 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr=#f66c6c, endColorStr=#f48f8f); /*兼容7<=IE<10*/
+
+    background: linear-gradient(#f45050d9, #f27c7cd9); /* 标准的语法*/
+    height: 1500px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    margin: 0 auto;
+    background-color: white;
+    height: 60px;
+}
+
+#nav {
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+#nav .logo {
+    height: 100%;
+    display: inline-block;
+}
+
+#nav .logo img {
+    max-height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px double snow;
+    vertical-align: bottom;
+    animation: rotateLogo 3s linear 0s infinite;
+    -webkit-animation: rotateLogo 3s linear 0s infinite;
+    -o-animation: rotateLogo 3s linear 0s infinite;
+    -moz-animation: rotateLogo 3s linear 0s infinite;
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+/*添加的logo提示框*/
+.musicTip {
+    display: inline-block;
+    visibility: hidden;
+    width: 10%;
+    background-color: #e98ed6;
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    border-radius: 2%;
+}
+
+.musicTip::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #e98ed6 transparent transparent;
+}
+
+#nav .logo:hover + .musicTip {
+    visibility: visible;
+}
+
+#nav h3 {
+    display: inline-block;
+    width: 10%;
+    height: 70%;
+    position: absolute;
+    left: 15%;
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    bottom: 8%;
+    font-family: myFont1;
+
+}
+
+#nav h3 a {
+    text-shadow: -4px -1px 7px #f28080;
+    color: #c75050e0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#nav #changeSkin {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    position: absolute;
+    right: 62%;
+    height: 50%;
+    bottom: 10%;
+    /*css渐变从左到右兼容所有浏览器*/
+    background: -webkit-linear-gradient(left, #d91414d9, #6fe20eb3); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left, #d91414d9, #6fe20eb3); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left, #d91414d9, #6fe20eb3); /* Firefox 3.6 - 15 */
+    /*ie不支持ARGB颜色，所以也需要改为RGB颜色,*/
+    background: linear-gradient(to right, #b71311, #4e9e0a); /* 兼容IE10、IE11不能用ARGB颜色 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, startColorStr=#b71311, endColorStr=#4e9e0a); /*兼容7<=IE<10*/
+    background: linear-gradient(to right, #d91414d9, #6fe20eb3); /* 标准的语法 */
+    color: snow;
+}
+
+#nav nav {
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#nav nav ul {
+    overflow: hidden;
+    height: 100%;
+}
+
+#nav nav ul li {
+    float: left;
+    width: 12%;
+    margin: 0 4%;
+    text-align: center;
+    height: 70%;
+    position: relative;
+    top: 20%;
+    font-size: 1rem;
+    box-shadow: inset 0px 0px 15px 0px #b32a06;
+}
+
+#nav nav ul li a {
+    position: relative;
+    top: 25%;
+    letter-spacing: 0.1rem;
+    color: #1f881be3;
+}
+
+#nav nav ul li:hover {
+    font-weight: 600;
+}
+
+#nav nav ul li:hover {
+    border-radius: 10%;
+    box-shadow: 0 0 5px 0 #bf5d2a;
+}
+
+#nav nav ul li.active {
+    background-color: #9acd32;
+
+}
+
+#nav nav ul li.active a {
+    color: white;
+}
+
+/*响应式导航*/
+#mnavicon {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    height: 50%;
+    width: 8%;
+    background-color: snow;
+    border: 2px double #dd81ad;
+}
+
+#mnavicon span {
+    position: absolute;
+    height: 15%;
+    width: 60%;
+    margin-left: 20%;
+    top: 42%;
+    display: block;
+    background-color: #dd81ad;
+}
+
+#mnavicon span:before {
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    bottom: 200%;
+    display: block;
+    background-color: #dd81ad;
+}
+
+#mnavicon span:after {
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    top: 200%;
+    display: block;
+    background-color: #dd81ad;
+}
+
+#mnav {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #ce6262;
+    border-radius: 0 0 15% 15%;
+
+}
+
+#mnav span {
+    position: absolute;
+    right: 1%;
+    top: 4%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+#mnav span:before {
+    content: " ";
+    height: 10%;
+    width: 100%;
+    margin-top: 30%;
+    display: block;
+    background-color: snow;
+    transform-origin: 60% 10%;
+    -o-transform-origin: 60% 10%;
+    -moz-transform-origin: 60% 10%;
+    -ms-transform-origin: 60% 10%;
+    -webkit-transform-origin: 60% 10%;
+    transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+}
+
+#mnav span:after {
+    content: " ";
+    height: 10%;
+    width: 100%;
+    display: block;
+    background-color: snow;
+    transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+
+#mnav span:hover {
+    border: 2px solid snow;
+    border-radius: 50%;
+}
+
+#mnav ul img:first-child, #mnav ul img:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 15%;
+    border-radius: 20% 20% 0 0;
+    border: 1px double snow;
+    animation: mnavImg 2s linear 1s infinite alternate;
+    -o-animation: mnavImg 2s linear 1s infinite alternate;
+    -moz-animation: mnavImg 2s linear 1s infinite alternate;
+    -webkit-animation: mnavImg 2s linear 1s infinite alternate;
+}
+
+@keyframes mnavImg {
+    from {
+        border-radius: 20% 20% 0 0;
+    }
+    to {
+        border-radius: 50% 50% 0 0;
+    }
+}
+
+#mnav ul img:first-child {
+    left: 10%;
+}
+
+#mnav ul img:last-child {
+    right: 10%;
+
+}
+
+#mnav ul li {
+    width: 25%;
+    margin: 0 auto;
+    background-color: #4ced6bb8;
+    border-bottom: 2px double #4fb470;
+    box-shadow: 2px 2px 2px 0px #e9dadc;
+    text-align: center;
+    animation: mnavAnimation 0.3s linear;
+    -moz-animation: mnavAnimation 0.3s linear;
+    -o-animation: mnavAnimation 0.3s linear;
+    -webkit-animation: mnavAnimation 0.3s linear;
+}
+
+@keyframes mnavAnimation {
+    from {
+        height: 0;
+    }
+    to {
+        height: 24px;
+    }
+}
+
+#mnav ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    width: 100%;
+    display: inline-block;
+    letter-spacing: 0.8rem;
+    /*letter-spacing居中解决办法*/
+    text-indent: 0.8rem;
+    color: snow;
+
+}
+
+#mnav ul li:hover {
+    background-color: #d65656c9;
+}
+
+#mnav ul li a:hover {
+    color: gold;
+}
+
+section {
+    width: 75%;
+    height: 1300px;
+    margin: 0 auto;
+    background-color: #fa9292;
+    position: relative;
+}
+
+.carousel {
+    position: absolute;
+    top: 3%;
+    width: 100%;
+
+}
+
+.carouselBox {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    /*border-radius值设置超大的一个神奇的特效(原因看张鑫旭大佬的博客),再和border配合更是锦上添花*/
+    border-radius: 999px;
+    border: 0.6rem double snow;
+
+}
+
+.carouselBox #left, #right {
+    position: absolute;
+    top: 45%;
+    color: snow;
+    font-size: 1.5rem;
+}
+
+.carouselBox #left {
+    left: 2%;
+    z-index: 99;
+}
+
+.carouselBox #right {
+    right: 2%;
+    z-index: 99;
+}
+
+.carousel div #left:hover, #right:hover {
+    color: red;
+}
+
+.carousel ul {
+    display: block;
+    width: calc(100% + 1 / 3 * 100% * 4);
+    /*这里必须是相对定位，如果是绝对定位的话就会使.carouselBox没有高度，具体原因未解决*/
+    position: relative;
+    left: 0;
+    /*解决多个inline-block标签一行中的间隙问题(由于inline-block标签间有空白被当做空格给予了字体大小引起的)*/
+    font-size: 0;
+    -webkit-text-size-adjust: none;
+}
+
+.carousel div ul li {
+    display: inline-block;
+    width: calc(1 / 7 * 100%);
+    opacity: 0.7;
+}
+
+.carousel div ul li.scaleLi {
+    opacity: 1;
+    transform: scale(1.8, 1.8);
+    -ms-transform: scale(1.8, 1.8); /* IE 9 */
+    -webkit-transform: scale(1.8, 1.8); /* Safari 和 Chrome */
+    -o-transform: scale(1.8, 1.8); /* Opera */
+    -moz-transform: scale(1.8, 1.8); /* Firefox */
+    /*Opacity 属性引发的层叠问题解决办法*/
+    position: relative;
+    z-index: 999;
+
+}
+
+.carousel ul li a {
+    display: inline-block;
+}
+
+.carousel div ul li img {
+    max-width: 100%;
+    /*解决a标签内放置img标签底部多出空隙的问题*/
+    vertical-align: bottom
+}
+
+@media screen and (max-width: 414px) {
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        height: 45px;
+    }
+
+    #nav {
+        width: 100%;
+    }
+
+    #nav .musicTip {
+        display: none;
+    }
+
+    #nav h3 {
+        width: 30%;
+        left: 35%;
+    }
+
+    #nav button {
+        display: none;
+    }
+
+    #nav nav {
+        display: none;
+    }
+
+    #nav #mnavicon {
+        display: block;
+        width: 12%;
+    }
+
+    #nav #mnav.open {
+        display: block;
+        z-index: 9999;
+    }
+
+    #nav #mnav.close {
+        display: none;
+    }
+
+    #mnav ul li {
+        width: 40%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .carouselBox {
+        width: 100%;
+        border: 0;
+
+    }
+
+    .carousel {
+        top: 2%;
+    }
+
+    .carouselBox #left, #right {
+        top: 37%;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+    html {
+        /* 在414px-768px分辨率之间的font-size大小区别为14px-16px */
+        font-size: calc(16px - 2 * (768px - 100vw) / 354);
+    }
+
+    /* 在414px-768px分辨率之间的header高大小区别为50px-60px */
+    header {
+        height: calc(60px - 10 * (768px - 100vw) / 354);
+    }
+
+    #nav {
+        width: 100%;
+    }
+
+    #nav .musicTip {
+        display: none;
+    }
+
+    #nav h3 {
+        width: 30%;
+        left: 35%;
+    }
+
+    #nav button {
+        display: none;
+    }
+
+    #nav nav {
+        display: none;
+    }
+
+    #nav #mnavicon {
+        display: block;
+    }
+
+    #nav #mnav.open {
+        display: block;
+        z-index: 9999;
+    }
+
+    #nav #mnav.close {
+        display: none;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .carouselBox {
+        width: 90%;
+        border: 0;
+    }
+
+    .carousel {
+        top: 2%;
+    }
+
+    .carouselBox #left, #right {
+        top: 41%;
+        font-size: 1.1rem;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    html {
+        /* 在768px-1200px分辨率之间的font-size大小区别为12px-14px */
+        font-size: calc(14px - 2 * (1200px - 100vw) / 432);
+    }
+
+    /* 在768px-1200px分辨率之间的header高大小区别为50px-60px */
+    header {
+        height: calc(60px - 10 * (1200px - 100vw) / 432);
+    }
+
+    #nav {
+        width: 100%;
+    }
+
+    #nav .musicTip {
+        display: none;
+    }
+
+    /* 在768px-1200px分辨率之间的.carouselBox宽为60% */
+    .carouselBox {
+        width: 70%;
+        border: 0.4rem double snow;
+
+    }
+
+    .carousel {
+        top: 2%;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+    html {
+        /* 在1200px-2000px分辨率之间的font-size大小区别为12px-16px */
+        font-size: calc(16px - 4 * (2000px - 100vw) / 800);
+    }
+
+    /* 在1200px-2000px分辨率之间的header高大小区别为50px-60px */
+    header {
+        height: calc(60px - 10 * (2000px - 100vw) / 800);
+    }
+
+    /* 在1200px-1600px分辨率之间的.carouselBox宽为60% */
+    .carouselBox {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    html {
+        /* 大于2000px分辨率的font-size大小为18px */
+        font-size: 18px;
+    }
+
+    header {
+        height: 60px;
+    }
+
+    .carouselBox {
+        width: 70%;
+    }
+}
+
+@font-face {
+    font-family: myFont1;
+    src: url('../font/channel_slanted2.ttf'),
+    url('../font/channel_slanted2.eot'); /* IE9+ */
+}

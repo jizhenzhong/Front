@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3动画加载条</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #loading {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        /*必须要设置背景色，否则没法覆盖*/
+        background-color: white;
+    }
+
+    #myAnimation {
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #myAnimation span {
+        display: block;
+        float: left;
+        width: 5px;
+        height: 30px;
+        margin: 6px 0 6px 2px;
+        background-color: green;
+        animation: load 0.6s linear infinite;
+    }
+
+    @keyframes load {
+        0% {
+            transform: scaleY(1);
+        }
+        50% {
+            transform: scaleY(0.4);
+        }
+        100% {
+            transform: scaleY(1);
+        }
+    }
+
+    /*因为在#myAnimation span动画设置中它的选择器优先级大于span:nth-child(1)优先级，
+      所以用css的!important强制属性优先级，虽然可以改(很简单)，但这里不改也是为了提醒
+      css选择器的优先级这个知识点*/
+    span:nth-child(1) {
+        animation-delay: 0S !important;
+        -moz-animation-delay: 0s !important;
+        -webkit-animation-delay: 0s !important;
+        -o-animation-delay: 0s !important;
+    }
+
+    span:nth-child(2) {
+        animation-delay: 0.1S !important;
+        -moz-animation-delay: 0.1s !important;
+        -webkit-animation-delay: 0.1s !important;
+        -o-animation-delay: 0.1s !important;
+    }
+
+    span:nth-child(3) {
+        animation-delay: 0.2S !important;
+        -moz-animation-delay: 0.2s !important;
+        -webkit-animation-delay: 0.2s !important;
+        -o-animation-delay: 0.2s !important;
+    }
+
+    span:nth-child(4) {
+        animation-delay: 0.3S !important;
+        -moz-animation-delay: 0.3s !important;
+        -webkit-animation-delay: 0.3s !important;
+        -o-animation-delay: 0.3s !important;
+    }
+
+    span:nth-child(5) {
+        animation-delay: 0.4S !important;
+        -moz-animation-delay: 0.4s !important;
+        -webkit-animation-delay: 0.4s !important;
+        -o-animation-delay: 0.4s !important;
+    }
+
+    #myPage {
+        text-align: center;
+    }
+</style>
+<body>
+<div id="loading">
+    <div id="myAnimation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+
+<div id="myPage">
+    <p>我是页面(注:放好几个大音频，专门用来测试加载效果，注意运行一次后要清缓存再次测试)</p>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+</div>
+<script>
+    //    onreadystatechange在w3c文档里只有document.readyState，没有它，但是测试后发现可以监听到(即可用)
+    document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+            setTimeout(function () {
+                document.getElementById("loading").style.display = "none";
+            },300)
+        }
+    }
+</script>
+</body>
+</html>

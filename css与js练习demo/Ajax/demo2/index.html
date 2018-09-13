@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //1》创建ajax对象
+    var xhr = null;
+    if(window.XMLHttpRequest){
+        xhr = new XMLHttpRequest();
+    }else{
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    //2》链接服务
+
+    xhr.open("POST","a.php",true);
+
+    //3》发送请求
+
+    dexhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    xhr.send("name=张三&age=18");
+
+    //4》接受返回
+    xhr.onreadystatechange = function(){
+
+        if(xhr.readyState==4 && xhr.status==200){
+
+            console.log(xhr.responseText);
+
+        }
+    }
+
+</script>
+
+</body>
+</html>

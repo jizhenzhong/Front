@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.bullet{
+    display: none;
+}

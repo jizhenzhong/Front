@@ -1,0 +1,250 @@
+/* 小于359px */
+@media only screen and (max-width: 359px) {
+    header{
+        margin-bottom:10px;
+    }
+    .content{
+        width: 100%;
+    }
+    .nav .pcnav {
+        display: none;
+    }
+
+    .nav #mnav {
+        display: block;
+        position: fixed;
+        z-index: 9999;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    /* 使用背景色隐藏中间的线 */
+    .picshow li i {
+        overflow: hidden;
+        display: block;
+        height: 100px;
+    }
+
+    .picshow .font {
+        display: none
+    }
+    article{
+        width: 100%;
+    }
+    aside{
+        display: none;
+    }
+    article ul li .blogpic{
+        width: 100%;
+        float: none;
+        height: 150px;
+        overflow: hidden;
+    }
+    article ul li .blogtitle{
+        clear: both;
+        padding-top:10px;
+    }
+    .autor .readmore{
+        display: block;
+        width: 100%;
+        background-color:#383838 ;
+        padding: 10px 0;
+        clear: both;
+        text-align: center;
+        margin-top:10px ;
+    }
+    h1.t_nav span{
+        display: none;
+    }
+    .leftbox {
+        width: 100%;
+    }
+    .rightbox {
+        width: 100%;
+    }
+    .article_box .arctitle{
+        font-size: 16px;
+    }
+    .article_box p{
+        font-size: 14px;
+    }
+}
+
+/* 大于360px，小于479x */
+@media only screen and (min-width: 360px) and (max-width: 479px) {
+    header{
+        margin-bottom:10px;
+    }
+    .nav .pcnav {
+        display: none;
+    }
+
+    .nav #mnav {
+        display: block;
+        position: fixed;
+        z-index: 9999;
+    }
+
+    .nav {
+        width: 100%;
+    }
+    /* 使用背景色隐藏中间的线 */
+    .picshow li i {
+        overflow: hidden;
+        display: block;
+        height: 100px;
+    }
+
+    .picshow .font {
+        display: none
+    }
+    .content{
+        width: 100%;
+    }
+    article{
+        width: 100%;
+    }
+    aside{
+        display: none;
+    }
+    article ul li .blogpic{
+        width: 100%;
+        float: none;
+        height: 150px;
+        overflow: hidden;
+    }
+    article ul li .blogtitle{
+        clear: both;
+        padding-top:10px;
+    }
+    .autor .readmore{
+        display: block;
+        width: 100%;
+        background-color:#383838 ;
+        padding: 10px 0;
+        clear: both;
+        text-align: center;
+        margin-top:10px ;
+    }
+    h1.t_nav span{
+        display: none;
+    }
+    .leftbox {
+        width: 100%;
+    }
+    .rightbox {
+        width: 100%;
+    }
+    .article_box .arctitle{
+        font-size: 16px;
+    }
+    .article_box p{
+        font-size: 14px;
+    }
+
+}
+
+/* 大于480px，小于767px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    header{
+        margin-bottom:10px;
+    }
+    .nav .pcnav {
+        display: none;
+    }
+
+    .nav #mnav {
+        display: block;
+        position: fixed;
+        z-index: 9999;
+    }
+
+    .nav {
+        width: 100%;
+    }
+    /* 使用背景色隐藏中间的线 */
+    .picshow li i {
+        overflow: hidden;
+        display: block;
+        height: 200px;
+    }
+
+    .picshow .font {
+        display: none
+    }
+    .content{
+        width: 100%;
+    }
+    article{
+        width: 62%;
+    }
+    aside{
+        width: 36%;
+    }
+    article ul li .blogpic{
+        width: 100%;
+        float: none;
+        height: 150px;
+        overflow: hidden;
+    }
+    article ul li .blogtitle{
+        clear: both;
+        padding-top:10px;
+    }
+    .autor .readmore{
+        display: block;
+        width: 100%;
+        background-color:#383838 ;
+        padding: 10px 0;
+        clear: both;
+        text-align: center;
+        margin-top:10px ;
+    }
+    h1.t_nav span{
+        display: none;
+    }
+    .article_box p{
+        font-size: 15px;
+    }
+}
+
+/* 大于768px，小于959px */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .nav,header,.content {
+        width: 100%;
+    }
+    .picshow li i {
+        overflow: hidden;
+        display: block;
+        height: 300px;
+    }
+
+    .picshow .font {
+        display: none
+    }
+    article{
+        width: 65%;
+    }
+    aside{
+        width: 33%;
+    }
+}
+
+/* 大于960px，小于1199px */
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .nav,header,.content {
+        width: 100%;
+    }
+    .picshow li i {
+        overflow: hidden;
+        display: block;
+        height: 400px;
+    }
+
+    .picshow .font {
+        display: none
+    }
+}

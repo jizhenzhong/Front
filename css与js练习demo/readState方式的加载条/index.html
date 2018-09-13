@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document对象的readState的加载条</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #loading {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        /*必须要设置背景色，否则没法覆盖*/
+        background-color: white;
+    }
+
+    #loading img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    #myPage {
+        text-align: center;
+    }
+</style>
+<body>
+<div id="loading">
+    <img src="img/loading.gif" alt="">
+</div>
+<div id="myPage">
+    <p>我是页面(注:放好几个大音频，专门用来测试加载效果，注意运行一次后要清缓存再次测试)</p>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+    <audio controls="controls">
+        <source src="陈一发儿%20-%20童话镇.mp3" type="audio/ogg">
+        <source src="陈一发儿%20-%20童话镇.ogg" type="audio/mpeg">
+        放个大音频，专门用来测试加载效果
+    </audio>
+</div>
+<script>
+    //    onreadystatechange在w3c文档里只有document.readyState，没有它，但是测试后发现可以监听到(即可用)
+    document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+            setTimeout(function () {
+                document.getElementById("loading").style.display = "none";
+            },300)
+        }
+    }
+</script>
+</body>
+</html>

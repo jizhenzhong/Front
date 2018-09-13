@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/css/base.css" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/css/index.css" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/css/m.css" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/avatar.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/b01.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/b02.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/b03.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/b04.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/b05.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner.png" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner1.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner1.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner1.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner2.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner2.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner3.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner3.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner4.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner4.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner5.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner5.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/banner5.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/newsbg01.png" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/newsbg02.png" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/newsbg04.png" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/text01.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/text02.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/zd01.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/zd02.jpg" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/imgs/zd03.jpg" charset="GB2312" />
+  </component>
+</project>

@@ -1,0 +1,41 @@
+﻿body{
+    margin: 0;
+    padding: 0;
+}
+#navUl{
+    /*清除浮动四种方式:在父容器</div>之前加入div容器设置清除浮动；给父容器添加height;
+	给父容器添加overflow:hidden或overflow:auto; 给父容器定义伪元素:after*/
+    overflow: auto;
+    width: 30%;
+    text-align: center;
+    background-color: pink;
+    padding: 0;
+    transition: background-color 2s linear 0s;
+    -webkit-transition: background-color 2s linear 0s;
+    -moz-transition: background-color 2s linear 0s;
+    -o-transition: background-color 2s linear 0s;
+}
+#navUl:hover{
+    background-color: gray;
+}
+#navUl li{
+    list-style: none;
+    float: left;
+    width: 25%;
+    padding: 10px 0 10px 0;
+}
+.span:hover{
+    display: inline-block;
+    /*2D变换只针对block元素*/
+    z-index: 10;
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+}
+
+
+
+
+
+
