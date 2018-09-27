@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    height: 80px;
+    width: 80px;
+
+    /*这个是定位图像位置的演示*/
+    margin: 200px auto;
+}
+#logo{
+    position: relative;
+}
+#logo img{
+    max-height: 100%;
+    border-radius: 50%;
+    animation: rotateLogo 2s linear infinite;
+}
+/*通过父元素的hover来控制子元素的显示和隐藏*/
+#logo:hover span{
+    display: block;
+}
+#logo span{
+    display: none;
+    /*让行内元素脱离文档流就会默认给予它块级属性(意想不到的收获)*/
+    position: absolute;
+    /*垂直居中*/
+    left: 110%;
+    top: 50%;
+    margin-top: -30%;
+    width: 140%;
+    height: 60%;
+    /*为了让span内的文本只显示两行，设置line-height的固定值为#logo盒子的height*60%/2，这个值是排版需要计算出来的*/
+    line-height: 24px;
+    background-color: #e98ed6;
+}
+/*logo提示框左边的三角箭头css*/
+#logo span:before{
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent #e98ed6 transparent transparent;
+    top: 50%;
+    margin-top: -3px;
+    margin-left: -10px;
+}
+
+
+@keyframes rotateLogo {
+    from{
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari and Chrome */
+        -o-transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        -ms-transform: rotate(360deg); /* IE 9 */
+        -webkit-transform: rotate(360deg); /* Safari and Chrome */
+        -o-transform: rotate(360deg);
+    }
+
+}
