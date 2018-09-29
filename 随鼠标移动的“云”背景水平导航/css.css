@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #911a1a;
+}
+a:hover{
+    color: snow;
+}
+nav {
+    width: 50%;
+
+    /*设置定位用来演示测试*/
+    margin: 200px auto;
+}
+ul{
+    list-style: none;
+    border-radius: 15px;
+    /*清除浮动*/
+    overflow: hidden;
+    background-color: pink;
+    background-image: url("imgs/cloud.png");
+    background-repeat: no-repeat;
+    /*背景图片相对于宿主元素的定位，第一个参数是水平定位，第二个参数是垂直定位,百分比的话
+        水平移动x%：(容器(container)的宽度—背景图片的宽度)*x%，由于背景图片宽与li的宽一样，
+        所以距第一个li的距离是calc(1 / 5 * 100%)*/
+    background-position: calc(0 / 5 * 100%)  0;
+    background-size: calc(1 / 6 * 100%)  100%;
+}
+
+ul li{
+    text-align: center;
+    float: left;
+    height: 50px;
+    /*line-height==height实现垂直文字居中*/
+    line-height: 50px;
+    width: calc(1 / 6 * 100%);
+}
+
