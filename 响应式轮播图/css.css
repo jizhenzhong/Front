@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+#carouselBox{
+    /*这个margin无意义，为了定位便于演示*/
+    margin: 200px auto;
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+}
+
+#carouselBox ul{
+    list-style: none;
+    /*清除浮动*/
+    overflow: hidden;
+    /*由于是6张轮播图，所以是600%*/
+    width: 600%;
+    /*使用相对定位，没有用绝对定位控制轮播切换功能是因为absolute会产生脱离文档流，目前没有没有找到防止父元素塌陷的方法*/
+    position:relative;
+    left: 0;
+}
+#carouselBox ul li{
+    float: left;
+    width: calc(100% / 6);
+    position: relative;
+}
+#carouselBox ul li img{
+    /*vertical-align: middle解决img与li底部的空白问题*/
+    vertical-align: middle;
+    width: 100%;
+}
+#carouselBox ul li span{
+    display: inline-block;
+    width: 70%;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    text-align: center;
+
+}
+#switchBtn {
+    width: 90%;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 30px;
+    color: plum;
+}
+
+#switchBtn span:hover{
+    color: green;
+    /*模仿可以点击的手势*/
+    cursor: pointer;
+}
+#switchBtn span.left{
+    float: left;
+}
+#switchBtn span.right{
+    float: right;
+}
